@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+* {
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: "Mochiy Pop One", sans-serif;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    display: flex;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: rgb(241, 241, 241);
+}
+header {
+    width: 100%;
+    background-color: rgb(24, 37, 48);
+}
+nav {
+    display: block;
+}
+ul {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+li {
+    padding: 15px;
+}
+a {
+    color: rgb(138, 131, 131);
+}
+a:hover {
+    color: rgb(241, 241, 241);
+}
+header a:hover {
+    filter: contrast(200%) brightness(200%);
+}
+.box {
+    display: inline-block;
+    padding: 10px;
+}
+.container {
+    width: 75%;
+    text-align: center;
+}
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 99999;
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 400ms ease-in 0s;
+}
+.modalDialog:target {
+    display: flex;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    position: relative;
+    margin: 5% 2% 0 70%;
+    background: rgb(51, 51, 51);
+}
+.close1 {
+    display: block;
+    color: rgb(255, 255, 255);
+    line-height: 25px;
+    position: absolute;
+    text-align: center;
+    right: 20px;
+    width: 24px;
+    font-weight: bold;
+    box-shadow: rgb(0, 0, 0) 1px 1px 3px;
+    background: rgb(96, 96, 97);
+    margin: 5px 0px 0px 20px;
+    text-decoration: none;
+    border-radius: 12px;
+}
+.more {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.class_more {
+    background-color: cyan;
+    padding: 0px 20px;
+}
+
+
+@media only screen and (max-width: 1371px)
+{
+    .modalDialog > div {margin: 10% 10% 0 50%;}
+    a {font-size: 20px;}
+    .container {overflow-y: scroll;scroll-behavior: smooth;}
+}
+@media only screen and (max-width: 958px)
+{
+    .modalDialog > div{margin: 15% 20% 0 40%;} 
+    a {font-size: 18px;}
+}
+@media only screen and (max-width: 650px)
+{
+    .modalDialog > div{margin: 15% 20% 0 30%;} 
+    a {font-size: 18px;}
+}
+@media only screen and (max-width: 435px)
+{
+    .modalDialog > div {margin: 25% 20% 0 30%;}
+    a {font-size: 15px;}
+}
+@media all and (device-width: 768px) {
+    .modalDialog > div {margin: 7% 10% 0 50%;}
+    a {font-size: 20px;}
+   }
+   @media all and (device-width: 1024px){
+   .modalDialog > div {margin: 5% 10% 0 50%;}
+    a {font-size: 22px;}
+    .container {overflow-y: scroll;scroll-behavior: smooth;}
+}
